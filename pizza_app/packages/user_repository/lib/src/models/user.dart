@@ -1,7 +1,5 @@
 import '../entities/entities.dart';
 
-export 'user.dart';
-
 class MyUser {
   String userId;
   String email;
@@ -16,16 +14,16 @@ class MyUser {
   });
 
   static final empty = MyUser(
-    userId: '',
-    email: '',
-    name: '',
+		userId: '', 
+		email: '', 
+		name: '',
     hasActiveCart: false,
-  );
+	);
 
   MyUserEntity toEntity() {
     return MyUserEntity(
-      userId: userId,
-      email: email,
+      userId: userId, 
+      email: email, 
       name: name,
       hasActiveCart: hasActiveCart,
     );
@@ -36,12 +34,12 @@ class MyUser {
       userId: entity.userId, 
       email: entity.email, 
       name: entity.name, 
-      hasActiveCart: entity.hasActiveCart,
+      hasActiveCart: entity.hasActiveCart
     );
-  } 
+  }
 
   @override
   String toString() {
-    return 'MyUser: $userId, $email, $name, $hasActiveCart'; 
+    return 'MyUser: $userId, $email, $name, $hasActiveCart';
   }
 }
